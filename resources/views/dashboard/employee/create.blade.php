@@ -19,7 +19,7 @@
                         <div class="col-md-6 col-md-offset-3">
                         <form action="" method="POST" role="form">
                             <legend>Add new employee form</legend>
-                            <div class="row no-gutters">
+                            <div class="row no-gutter">
                                 <div class="col-md-6 ">
                                     <div class="form-group">
                                         <label for="">Last name</label>
@@ -33,8 +33,8 @@
                                     </div>    
                                 </div>
                             </div>
-                            <div class="row no-gutters">
-                                <div class="col-md-3">
+                            <div class="row no-gutter">
+                                <div class="col-md-2">
                                     <div class="form-group">
                                         <label for="">Title Name</label>
                                         <select name="" id="input" class="form-control" required="required" >
@@ -46,7 +46,18 @@
                                         </select>
                                     </div>    
                                 </div>
-                                <div class="col-md-9">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput">Title Position</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput2">Contact Number</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Example input">
+                                    </div>
                                 </div>
                             </div>
                         
