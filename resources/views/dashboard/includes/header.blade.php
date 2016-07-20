@@ -32,7 +32,7 @@
                                         <!-- start message -->
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="assets/images/users/{{ Auth::user()->pic }}" class="img-circle" alt="User Image">
+                                                <img src="{{URL::asset('../assets/images/users')}}/{{ Auth::user()->pic }}" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                               Support Team
@@ -45,7 +45,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="assets/images/users/{{ Auth::user()->pic }}" class="img-circle" alt="User Image">
+                                                <img src="{{URL::asset('../assets/images/users')}}/{{ Auth::user()->pic }}" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                               AdminLTE Design Team
@@ -57,7 +57,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="assets/images/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="{{URL::asset('../assets/images/users')}}/{{ Auth::user()->pic }}" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                               Developers
@@ -69,7 +69,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="assets/images/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="{{URL::asset('../assets/images/users')}}/{{ Auth::user()->pic }}" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                               Sales Department
@@ -81,7 +81,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="assets/images/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="{{URL::asset('../assets/images/users')}}/{{ Auth::user()->pic }}" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                               Reviewers
@@ -217,13 +217,13 @@
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="assets/images/users/{{ Auth::user()->pic }}" class="user-image" alt="User Image">
+                            <img src="{{URL::asset('../assets/images/users')}}/{{ Auth::user()->pic }}" class="user-image" alt="User Image">
                             <span class="hidden-xs">{{Auth::user()->title_name }} {{Auth::user()->first_name }} {{ Auth::user()->last_name}} </span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="assets/images/users/{{ Auth::user()->pic }}" class="img-circle" alt="User Image">
+                                <img src="{{URL::asset('../assets/images/users')}}/{{ Auth::user()->pic }}" class="img-circle" alt="User Image">
 
                                 <p>
                                     {{Auth::user()->title_name }} {{Auth::user()->first_name }} {{ Auth::user()->last_name}}<br>

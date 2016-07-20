@@ -17,7 +17,13 @@ Route::get('/partners',	['uses'=>'PagesController@partners']);
 Route::get('/courses', 	['uses'=>'PagesController@courses']);
 Route::get('/contact', 	['uses'=>'PagesController@contact']);
 
+// AUTHENTICATED AREA
 Route::auth();
-Route::get('/home', 	['uses'=>'HomeController@index']);
-//Employee
-Route::get('/employee', ['uses'=>'EmployeeController@index']);
+Route::get('/dashboard', 	['as'=>'','uses'=>'HomeController@index']);
+$router->group([
+  	'namespace' => 'Dashboard',
+  	'middleware' => 'auth',
+], function () {
+  	Route::resource('dashboard/employee', 'EmployeeController');
+  	Route::resource('dashboard/travel', 'TagController');
+});

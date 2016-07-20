@@ -4,7 +4,7 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="assets/images/users/{{ Auth::user()->pic }}" class="img-circle" alt="User Image">
+                <img src="{{URL::asset('../assets/images/users')}}/{{ Auth::user()->pic }}" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
                 <p> {{Auth::user()->title_name }} {{Auth::user()->first_name }} {{ Auth::user()->last_name}} </p>
@@ -24,7 +24,7 @@
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
-            <li class="active"><a href="dashboard"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+            <li class="active"><a href="/dashboard"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
             <li class="treeview">
                 <a href="#">
                     <i class="ion ion-person"></i> <span>Employee</span>
@@ -33,9 +33,9 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="employee"><i class="ion ion-clipboard"></i> List of employees</a></li>
-                    <li><a href="{{url('emplyee/create')}}"><i class="ion ion-android-create"></i> Add new employee</a></li>
-                    <li><a href=""><i class="ion ion-close-round"></i> Inactive Employee</a></li>
+                    <li><a href="{{url('dashboard/employee')}}"><i class="ion ion-clipboard"></i> List of employees</a></li>
+                    <li><a href="{{url('dashboard/employee/create') }}"><i class="ion ion-android-create"></i> Add new employee</a></li>
+                    <li><a href="{{url('dashboard/employee/edit')}}"><i class="ion ion-close-round"></i> Inactive Employee</a></li>
                 </ul>
             </li>
             <li class="treeview">

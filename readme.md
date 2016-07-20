@@ -10,7 +10,13 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
-## Official Documentation
+## For [Jeric Del Rosario](https://www.facebook.com/djeric75)
+Steps para mapagana mo itong project naten.
+1. Download mo itong github repository or project naten via zip or git clone.
+2. Kapag may kopya kana ng project naten, simply install its repositories via "composer install" in CMD or command prompt.
+3. Then run laravel server, "php artisan serve".
+
+## OFFICIAL DOCUMENTATION
 
 Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
 

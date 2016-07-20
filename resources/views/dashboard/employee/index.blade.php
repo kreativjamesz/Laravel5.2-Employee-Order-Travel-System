@@ -1,7 +1,7 @@
-@extends('layouts.dashboard')
+@extends('dashboard.layouts.master')
 @section('content')
-<div class="content-wrapper" style="background: url('./assets/images/logo-bg.png') no-repeat 20% 30% fixed; -webkit-background-size: ;-moz-background-size: cover;-o-background-size: cover;background-size:cover;">
-	<section class="content" >
+
+	<section class="content">
         <section class="content-header">
             <h1>
                 Employees List
@@ -16,7 +16,9 @@
         <section class="content-container">
         	<div class="row">
 				<div class="box">
-			    		{{-- <div class="box-header"><h3 class="box-title">Hover Data Table</h3></div><!-- /.box-header --> --}}
+			    		<div class="box-header">
+			    			<a href=""class="btn btn-primary pull-left btn-purple" >Add new employee</a>
+		    			</div><!-- /.box-header -->
 				    	<div class="box-body">
 			        		<table id="employees-table" class="table table-hover table-bordered tabl-responsive">
 					          	<thead>
@@ -77,12 +79,11 @@
 
         </section>
     </section>
-</div>
 
 @endsection
 @section('scripts')
-<script src="plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+<script src="{{URL::asset('../plugins/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{URL::asset('../plugins/datatables/dataTables.bootstrap.min.js')}}"></script>
 <script type="text/javascript">
 $('#employees-table').DataTable({
 	"order": [[0, "asc"]],

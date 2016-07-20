@@ -1,9 +1,5 @@
-@extends('layouts.dashboard')
+@extends('dashboard.layouts.master')
 @section('content')
-
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper" style="background: url('./assets/images/logo-bg.png') no-repeat 20% 30% fixed; -webkit-background-size: ;-moz-background-size: cover;-o-background-size: cover;background-size:cover;">
-        <!-- Content Header (Page header) -->
     <!-- Main content -->
     <section class="content" >
         <section class="content-header">
@@ -149,19 +145,8 @@
         </div>
     </section>
     <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-
-  <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 2.3.5
-    </div>
-    <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
-    reserved.
-  </footer>
-
-  <!-- Control Sidebar -->
-  @include('dashboard.includes.aside')
+  
+    
 @endsection
 
 @section('scripts')

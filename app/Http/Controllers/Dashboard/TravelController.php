@@ -1,30 +1,22 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Dashboard;
 
 use Illuminate\Http\Request;
-use App\Http\Requests;
-use App\Employee;
 
-class EmployeeController extends Controller
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+
+class TravelController extends Controller
 {
-    /*
-     *Required for Authenticated users
-     *
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $employees = Employee::paginate(10);
-        //return view('dashboard.employee.index')->withEmployees(Employee::all());;
-        return view('dashboard.employee.index')->with('employees',$employees);
+        //
     }
 
     /**
@@ -34,7 +26,7 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        return view('dashboard.employee.create');
+        //
     }
 
     /**
