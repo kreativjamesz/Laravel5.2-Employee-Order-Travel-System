@@ -45,3 +45,7 @@
     padding-right:5;
     padding-left:5;
 }
+.x-req::after {
+  content:"*";
+  color:red;
+}
