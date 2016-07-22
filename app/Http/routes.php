@@ -10,7 +10,9 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+Route::get('/home', function(){
+	return redirect('/');
+});
 Route::get('/', 		['uses'=>'PagesController@index']);
 Route::get('/about', 	['uses'=>'PagesController@about']);
 Route::get('/partners',	['uses'=>'PagesController@partners']);
@@ -25,5 +27,5 @@ $router->group([
   	'middleware' => 'auth',
 ], function () {
   	Route::resource('dashboard/employee', 'EmployeeController');
-  	Route::resource('dashboard/travel', 'TagController');
+  	Route::resource('dashboard/schedule', 'ScheduleController');
 });

@@ -6,9 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Employee;
 
-class EmployeeController extends Controller
+class ScheduleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +16,7 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $employees = Employee::paginate(5);
-        return view('dashboard.employee.index')->with('employees',$employees);
+        //
     }
 
     /**
@@ -28,7 +26,7 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        return view('dashboard.employee.create');
+        //
     }
 
     /**
@@ -39,14 +37,7 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'last_name'=>'required|max:255'
-        ]);
-        $employee = new Employee;
-        $employee->last_name = $request->input_Lname;
-        $employee-save();
-
-        return view('dashboard.employee.index');
+        //
     }
 
     /**

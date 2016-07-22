@@ -8,68 +8,90 @@
             </h1>
             <ol class="breadcrumb">
                 <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-                <li><a href="/home"><i class="fa fa-dashboard"></i>Dashboard</a></li>
-                <li class="active">Employee</li>
+                <li><a href="/dashboard"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+                <li><a href="/dashboard/employee"><i class="fa fa-user"></i>Employee</a></li>
+                <li class="active">Create Employee</li>
             </ol>
         </section>
         <section class="content-container">
             <div class="row">
-                <div class="box">
-                    <div class="box-body">
-                        <div class="col-md-6 col-md-offset-3">
-                        <form action="" method="POST" role="form">
-                            <legend>Add new employee form</legend>
-                            <div class="row ">
-                                <div class="col-md-6 ">
-                                    <div class="form-group">
-                                        <label for="inputLname" class="x-req">Last name</label>
-                                        <input type="text" class="form-control" id="inputLname" name="inputLname"placeholder="Input field">
+                <div class="col-md-12">
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <h3 class="box-title"></h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            </div><!-- /.box-tools -->
+                        </div>
+                        <div class="box-body">
+                            {!! Form::open(array('route' => 'dashboard.employee.store')) !!}
+                                <div class="row">
+                                    
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            {{ Form::label('inputLname', 'Last Name', array('class'=>'x-req')) }}    
+                                            <small><em></em></small>
+                                            {{ Form::text('inputLname',null,array('class'=>'form-control','placeholder'=>'Enter you Lastname...')) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            {{ Form::label('inputFname', 'First Name', array('class'=>'x-req')) }}
+                                            {{ Form::text('inputFname',null,array('class'=>'form-control','placeholder'=>'Enter you Firstname...')) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="selectTitle" class="x-req">Title Name</label>
+                                            <select name="selectTitle" id="selectTitle" class="form-control" required="required" >
+                                                <option value="0">Mr.</option>
+                                                <option value="1">Ms.</option>
+                                                <option value="2">Mrs.</option>
+                                                <option value="3">Dr.</option>
+                                                <option value="4">Prof.</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                            {{ Form::label('inputPosition', 'Position', array('class'=>'x-req')) }}
+                                            {{ Form::text('inputPosition',null,array('class'=>'form-control','placeholder'=>'Enter your position...')) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                            {{ Form::label('inputContactNum', 'Contact Number', array('class'=>'x-req')) }}
+                                            {{ Form::text('inputContactNum',null,array('class'=>'form-control','placeholder'=>'Enter your contact number...')) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                            {{ Form::label('inputEmail', 'Email', array('class'=>'x-req')) }}
+                                            {{ Form::text('inputEmail',null,array('class'=>'form-control','placeholder'=>'Enter your email...')) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            {{ Form::label('inputAddress', 'Address', array('class'=>'x-req')) }}
+                                            {{ Form::textarea('inputAddress',null,array('class'=>'form-control','placeholder'=>'Enter complete address...')) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            {{ Form::label('filePic', 'Profile Picture') }}
+                                            {{ Form::file('image'),null,array('class'=>'form-control') }}
+                                            <br>
+                                            <img src="{{URL::asset('assets/images/avatar5.png')}}" alt="" style="width: 150px; height:150px; ">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group clearfix">
+                                            {{ Form::submit('Save Employee!',array('class'=>'btn btn-purple pull-right noradius')) }}
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 ">
-                                    <div class="form-group">
-                                        <label for="inputFname" class="x-req">First name</label>
-                                        <input type="text" class="form-control" id="inputFname" name="inputFname" placeholder="Input field">
-                                    </div>    
-                                </div>
-                            </div>
-                            <div class="row ">
-                                <div class="col-md-2">
-                                    <div class="form-group">
-                                        <label for="selectTitle" class="x-req">Title Name</label>
-                                        <select name="" id="selectTitle" class="form-control" required="required" >
-                                            <option value="">Mr.</option>
-                                            <option value="">Ms.</option>
-                                            <option value="">Mrs.</option>
-                                            <option value="">Dr.</option>
-                                            <option value="">Prof.</option>
-                                        </select>
-                                    </div>    
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label for="inputPosition" class="x-req">Title Position</label>
-                                        <input type="text" class="form-control" id="inputPosition" class="x-req" placeholder="Example input">
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label for="inputMobile" class="x-req">Contact Number</label>
-                                        <input type="text" class="form-control" id="inputMobile" placeholder="Enter Mobile num.">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="inputEmail" class="x-req">Email Address</label>
-                                        <input type="text" class="form-control" id="inputEmail" placeholder="Enter Email...">
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            
-                            
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
+                            {!! Form::close() !!}
                         </div>
                     </div>
                 </div>

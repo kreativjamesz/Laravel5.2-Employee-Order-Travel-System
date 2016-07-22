@@ -7,7 +7,7 @@
                 <img src="{{URL::asset('../assets/images/users')}}/{{ Auth::user()->pic }}" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p> {{Auth::user()->title_name }} {{Auth::user()->first_name }} {{ Auth::user()->last_name}} </p>
+                <p> {{Auth::user()->title_name }} {{Auth::user()->first_name }} {{ Auth::user()->last_name}}</p>
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>

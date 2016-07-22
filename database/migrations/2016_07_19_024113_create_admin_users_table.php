@@ -19,7 +19,7 @@ class CreateAdminUsersTable extends Migration
             $table->string('title_name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('profile-pic');
+            $table->string('pic');
             $table->string('contact_num');
             $table->string('status')->default('INACTIVE');
             $table->string('address');

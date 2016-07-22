@@ -50,3 +50,10 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token'=> str_random(10),
     ];
 });
+
+$factory->define(App\Title::class, functon (Faker\Generator $faker){
+    return [
+        'title_name'    => $faker->titleMale,
+        'description'   => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    ];
+});

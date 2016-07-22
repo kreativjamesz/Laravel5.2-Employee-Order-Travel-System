@@ -1,8 +1,10 @@
 body {
     height: 100% !important;
-    background: #fefefe;
-    font-family: 'Tangerine', serif !important;
-    font-size: 48px;
+    background: #fff !important;
+    /*font-family: 'Tangerine', serif !important;*/
+    /*font-family: 'Lato', serif !important;*/
+    font-family: 'Montserrat', sans-serif !important;
+  
 }
 .great-vibes{
     font-family: 'Great Vibes', cursive;

@@ -4,23 +4,32 @@
 	<section class="content">
         <section class="content-header">
             <h1>
-                Employees List
+                Employee
                 <small></small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-                <li><a href="/home"><i class="fa fa-dashboard"></i>Dashboard</a></li>
-                <li class="active">Employee</li>
+                <li><a href="/dashboard"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+                <li class="active"><i class="fa fa-user"></i>Employee</li>
             </ol>
         </section>
         <section class="content-container">
         	<div class="row">
-				<div class="box">
-			    		<div class="box-header">
-			    			<a href=""class="btn btn-primary pull-left btn-purple" >Add new employee</a>
-		    			</div><!-- /.box-header -->
+        		<div class="col-md-12">
+        			<div class="box box-purple">
+			    		<div class="box-header with-border">
+			              	<h3 class="box-title">List of employees</h3>
+			              	<div class="box-tools pull-right">
+			                	<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+			              	</div><!-- /.box-tools -->
+			            </div>
 				    	<div class="box-body">
-			        		<table id="employees-table" class="table table-hover table-bordered tabl-responsive">
+				    		<div class="col-md-6">
+				    			<label >Filter Table</label>
+				    			<a href="{{URL::to('dashboard/employee/create')}}" class="btn btn-primary pull-left btn-purple" ><i class="ion-person-add"></i> Add new employee</a>	
+				    		</div>
+
+			        		<table id="employees-table" class="table table-hover table-bordered tabl-responsive" style="">
 					          	<thead>
 						            <tr>
 						            	<th>ID</th>
@@ -62,21 +71,21 @@
 					            @endforeach
 
 					          	</tbody>
-								
 					        </table>
+
 					        <div class="row">
 							    <div class="col-sm-12 col-md-6 col-lg-6 ">
 							        <div class="dataTables_info" id="employees-table_info" role="status" aria-live="polite">Showing {{$employees->currentPage()}} to {{$employees->perPage()}} of {{$employees->total()}} entries</div>
 							    </div>
-							    <div class="col-sm-12 col-md-6 col-lg-6 ">
-							    	<p style="float:right;">{{ $employees->links() }}</p>
+							    <div class="col-md-12 text-center">
+							    	<p class="text-center">{{ $employees->links() }}</p>
 							    </div>
 							</div>
-			        		
 		        		</div>
-			</div>
-	        
+					</div>
+        		</div>
 
+	        </div>
         </section>
     </section>
 
@@ -89,7 +98,7 @@ $('#employees-table').DataTable({
 	"order": [[0, "asc"]],
   	"paging": false,
   	"lengthChange": false,
-  	"searchable": true,
+  	"searchable": false,
   	"ordering": false,
   	"info": false,
   	"autoWidth": false

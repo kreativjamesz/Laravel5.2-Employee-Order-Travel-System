@@ -13,7 +13,7 @@ class AuthController extends Controller
     //1
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
     //2
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/dashboard';
     protected $maxLoginAttempts = 5; // Amount of bad attempts user can make
     protected $lockoutTime = 30; // Time for which user is going to be blocked in seconds
     //3

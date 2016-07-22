@@ -43,7 +43,7 @@
                             {{Auth::user()->title_name }} {{Auth::user()->first_name }} {{ Auth::user()->last_name}} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="/home"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                            <li><a href="/dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
                             <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                         </ul>
                     </li>
